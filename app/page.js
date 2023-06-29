@@ -36,7 +36,7 @@ function Page() {
 
   return (
     <main>
-      <h1>Study Quest</h1>
+      <h1>Study Quest !!!!</h1>
       {
         (user == null) ? (
           <button onClick={handleSignin}>Sign in with google</button>
