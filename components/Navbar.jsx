@@ -20,20 +20,18 @@ const Navbar = () => {
         const response = await signInGooglePopup();
 
         if (response.error) {
-            return console.log(response.error);
+            return
         }
 
         // Successful
-        console.log(response.user)
         return router.push("/admin");
     }
 
     const handleSignout = async (event) => {
         const response = await signOutGoogle();
 
-        // DEBUG
         if (response.error) {
-            return console.log(result.error);
+            return
         }
 
         // Successful

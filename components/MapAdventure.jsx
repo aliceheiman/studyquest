@@ -78,14 +78,6 @@ const MapAdventure = ({ accessToken }) => {
         }
     }))
 
-    const infoSwal = (msg) => {
-        MySwal.fire({
-            icon: "info",
-            title: <p>Let's get started!</p>,
-            text: msg
-        })
-    }
-
     const startAgainSwal = () => {
         MySwal.fire({
             title: "No questions left to revise!",
@@ -101,8 +93,6 @@ const MapAdventure = ({ accessToken }) => {
     }
 
     const questionSwal = (question) => {
-        console.log("IN SWAL");
-
         MySwal.fire({
             title: question.front,
             icon: 'question',
@@ -160,7 +150,7 @@ const MapAdventure = ({ accessToken }) => {
     function LocationMarker() {
         const [position, setPosition] = useState(null);
         const [bbox, setBbox] = useState([]);
-        const minRadius = 500;
+        const minRadius = 30;
 
         const map = useMap();
 
@@ -199,7 +189,6 @@ const MapAdventure = ({ accessToken }) => {
                 // Check if close to current marker
                 if (!loading && markersLeft.length > 0) {
                     const distance = map.distance(latlng, markersLeft[0])
-                    console.log("distance: ", distance)
 
                     if (distance <= radius) {
                         circle.setStyle({ fillColor: 'green' })
@@ -236,7 +225,7 @@ const MapAdventure = ({ accessToken }) => {
                 >
                     <TileLayer
                         url={mapUrl}
-                        attribution='Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>'
+                        attribution='Map data &copy; <a href=&quot;https://www.openstreetmap.org/&quot;>OpenStreetMap</a> contributors, <a href=&quot;https://creativecommons.org/licenses/by-sa/2.0/&quot;>CC-BY-SA</a>, Imagery &copy; <a href=&quot;https://www.mapbox.com/&quot;>Mapbox</a>'
                     />
                     <LocationMarker />
 
