@@ -5,7 +5,7 @@ function Page() {
     return (
         <main className="adventure">
             <MapAdventure
-                accessToken={process.env.MAPBOX_ACCESS_TOKEN}
+                accessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}
             />
         </main>
     )
