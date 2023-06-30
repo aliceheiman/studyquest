@@ -24,7 +24,7 @@ const Navbar = () => {
         }
 
         // Successful
-        return router.push("/admin");
+        return router.push("/profile");
     }
 
     const handleSignout = async (event) => {

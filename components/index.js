@@ -7,6 +7,9 @@ import QuickPlay from './QuickPlay';
 import LocationMarker from './LocationMarker';
 import MapAdventure from './MapAdventure';
 import VideoBackground from './VideoBackground';
+import SearchBar from './SearchBar';
+import CustomFilter from './CustomFilter';
+import Decks from './Decks';
 
 export {
     Hero,
@@ -17,5 +20,8 @@ export {
     QuickPlay,
     LocationMarker,
     MapAdventure,
-    VideoBackground
+    VideoBackground,
+    SearchBar,
+    CustomFilter,
+    Decks
 }

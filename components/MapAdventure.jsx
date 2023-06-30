@@ -35,7 +35,7 @@ const MapAdventure = ({ accessToken }) => {
     let mapUrl = "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
 
     if (accessToken) {
-        const mapUrl = `https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${accessToken}`
+        mapUrl = `https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${accessToken}`
     }
 
 

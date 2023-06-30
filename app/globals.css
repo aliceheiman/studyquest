@@ -80,7 +80,7 @@
 }
 
 .home__cars-wrapper {
-  @apply grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-8 pt-14;
+  @apply grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-4 pt-4;
 }
 
 .home__error-container {
@@ -303,7 +303,7 @@
 .video-background {
   position: absolute;
   height: 100%;
-  width: auto;
+  width: 100%;
   object-fit: cover;
 }
 
