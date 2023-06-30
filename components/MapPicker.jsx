@@ -19,7 +19,12 @@ const MapPicker = ({ accessToken, markers, setMarkers, targetMarkers }) => {
 
     // SETUP
     const position = [59.329323, 18.068581]
-    const mapUrl = `https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${accessToken}`
+
+    if (accessToken) {
+        const mapUrl = `https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${accessToken}`
+    } else {
+        const mapUrl = "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+    }
 
     let markersLeft = targetMarkers - markers.length
 

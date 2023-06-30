@@ -6,6 +6,7 @@ import MapPicker from './MapPicker';
 import QuickPlay from './QuickPlay';
 import LocationMarker from './LocationMarker';
 import MapAdventure from './MapAdventure';
+import VideoBackground from './VideoBackground';
 
 export {
     Hero,
@@ -15,5 +16,6 @@ export {
     MapPicker,
     QuickPlay,
     LocationMarker,
-    MapAdventure
+    MapAdventure,
+    VideoBackground
 }

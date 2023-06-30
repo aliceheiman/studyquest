@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Hero } from "@/components";
+import { Hero, VideoBackground } from "@/components";
 
 function Page() {
 

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { CustomButton } from '.'
+import { CustomButton, VideoBackground } from '.'
 
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
@@ -20,7 +20,7 @@ const Hero = () => {
 
     return (
         <div className="hero">
-            <div className="flex-1 pt-32 padding-x">
+            <div className="flex-1 pt-24 pb-24 padding-x">
 
                 <h1 className='hero__title'>
                     Make studying an adventure!
@@ -34,12 +34,9 @@ const Hero = () => {
                         containerStyles="bg-primary-blue text-white rounded-full mt-6"
                     />
                 </Link>
-
-
-
             </div>
 
-
+            <VideoBackground />
         </div>
     )
 }
