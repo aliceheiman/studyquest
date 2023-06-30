@@ -226,3 +226,63 @@
 }
 
 /* END:search manufacturer styles */
+
+/* START: map styles */
+
+.map_picker {
+  height: 50vh;
+  width: 100%;
+}
+
+.map_adventure {
+  height: 80vh;
+  width: 100%;
+}
+
+.marker_info__box {
+  z-index: 10000;
+}
+
+.map_undo__button {
+  z-index: 10000;
+  position: absolute;
+  bottom: 22px;
+  right: 4px;
+}
+
+.map_play__button {
+  z-index: 10000;
+  position: absolute;
+  top: 4px;
+  width: 400px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
+}
+
+/* END: map styles */
+
+.hero-svg {
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    z-index: -1;
+}
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear alternate infinite;
+  opacity: 50%;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 822;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}

@@ -2,10 +2,18 @@ import Hero from './Hero';
 import CustomButton from './CustomButton';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import MapPicker from './MapPicker';
+import QuickPlay from './QuickPlay';
+import LocationMarker from './LocationMarker';
+import MapAdventure from './MapAdventure';
 
 export {
     Hero,
     CustomButton,
     Navbar,
-    Footer
+    Footer,
+    MapPicker,
+    QuickPlay,
+    LocationMarker,
+    MapAdventure
 }
