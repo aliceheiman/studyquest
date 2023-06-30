@@ -2,6 +2,7 @@
 
 // REACT
 import React, { useEffect, useState } from "react";
+import Link from 'next/link';
 
 // LEAFLET IMPORTS
 import 'leaflet/dist/leaflet.css';
@@ -24,6 +25,8 @@ const MapAdventure = ({ accessToken }) => {
     const [markersLeft, setMarkersLeft] = useState([]);
     const [randomize, setRandomize] = useState(null)
     const [inSwal, setInSwal] = useState(false);
+    const [energyPoints, setEnergyPoints] = useState(0);
+    const [knowledgePoints, setKnowledgePoints] = useState(0);
 
 
     // SETUP
@@ -43,6 +46,7 @@ const MapAdventure = ({ accessToken }) => {
             setMarkersLeft([...storedAdventure.markers])
             setRandomize(storedAdventure.randomize)
             setLoading(false)
+
         }
 
     }, [])
@@ -66,7 +70,7 @@ const MapAdventure = ({ accessToken }) => {
         toast: true,
         position: 'top-end',
         showConfirmButton: false,
-        timer: 3000,
+        timer: 5000,
         timerProgressBar: true,
         didOpen: (toast) => {
             toast.addEventListener('mouseenter', Swal.stopTimer)
@@ -79,6 +83,13 @@ const MapAdventure = ({ accessToken }) => {
             icon: "info",
             title: <p>Let's get started!</p>,
             text: msg
+        })
+    }
+
+    const startAgainSwal = () => {
+        MySwal.fire({
+            title: "No questions left to revise!",
+            text: "Go to QuickPlay to play again!",
         })
     }
 
@@ -128,15 +139,15 @@ const MapAdventure = ({ accessToken }) => {
 
                     sessionStorage.setItem("adventure", JSON.stringify(adventure))
 
-                    console.log(newMarkers)
-
                     if (result.isConfirmed) {
-                        toastSwal(`You earned +10 Energy Points and +10 Knowledge Points!`);
+                        toastSwal(`You earned +15 ⚡️ Points and +10 🧠 Points!`);
+                        setEnergyPoints(energyPoints + 15);
+                        setKnowledgePoints(knowledgePoints + 10);
                         return;
                     }
 
-                    toastSwal("You earned +10 Energy Points!")
-
+                    toastSwal("You earned +10 ⚡️ Points!")
+                    setEnergyPoints(energyPoints + 10);
                 })
             }
         })
@@ -149,7 +160,7 @@ const MapAdventure = ({ accessToken }) => {
     function LocationMarker() {
         const [position, setPosition] = useState(null);
         const [bbox, setBbox] = useState([]);
-        const minRadius = 250;
+        const minRadius = 500;
 
         const map = useMap();
 
@@ -240,6 +251,22 @@ const MapAdventure = ({ accessToken }) => {
                     )}
 
                 </MapContainer>
+
+                <div className="marker_info__box absolute top-0 right-0 bg-white p-2 m-1 text-right">
+                    <p className="font-bold">{questionsLeft.length} questions left</p>
+                    <p>{energyPoints} ⚡️ points</p>
+                    <p>{knowledgePoints} 🧠 points</p>
+                </div>
+
+                {(!loading & questionsLeft.length === 0) ? (
+                    <Link href="/quickplay">
+                        <CustomButton
+                            title="Start again!"
+                            containerStyles="map_play__button bg-primary-blue text-white"
+                        />
+                    </Link>
+                ) : <></>}
+
 
             </div>
 
