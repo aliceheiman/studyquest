@@ -157,7 +157,7 @@ const QuickPlay = ({ accessToken }) => {
         <div className="quickplay p-8">
             <div className="mb-10">
                 <h2 className="font-extrabold text-[25px]">Step #1: Enter Flashcards</h2>
-                <p className="mb-2">Enter your flashcards, one per row, in the format "Q: Question A: Answer".</p>
+                <p className="mb-2">Enter your flashcards, one per row, in the format &quot;Q: Question A: Answer&quot;.</p>
                 <textarea id="question-area" className="w-full bg-slate-100 h-48 p-2" placeholder="Q: What does DNA stand for? A: Deoxyribonucleic acid"></textarea>
                 <CustomButton
                     title="Save"
