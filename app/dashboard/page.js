@@ -19,7 +19,7 @@ export default function Page() {
                         <h2 class="study__title">Decks</h2>
                         <p class="study__description">Select or create a deck to start studying.</p>
 
-                        <Decks />
+                        <p>No decks found. Use QuickPlay to get up and running.</p>
 
                     </section>
                 ) : (
