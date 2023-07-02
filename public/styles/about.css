@@ -1,0 +1,109 @@
+.about__learning {
+    display: flex;
+    gap: 20px;
+    padding: 16px 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about__img {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__img img {
+    width: 80%;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.about__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 450px;
+    max-width: 500px;
+}
+
+.about__list {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.about__list-item {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.about__list h4 {
+    font-family: var(--font-title);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.about__list img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.about__cards {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    padding: 28px 0;
+    flex-wrap: wrap;
+}
+
+.about__card {
+    position: relative;
+    border-radius: 20px;
+    height: 250px;
+    padding: 28px 24px;
+    color: #fff;
+    text-align: left;
+    min-width: 400px;
+    flex: 1;
+}
+
+.about__card .study__description {
+    color: #fff;
+    margin-top: 32px;
+}
+
+.about__card-number {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-family: var(--font-title);
+    font-size: 64px;
+    font-weight: 100;
+    opacity: 0.5;
+}
+
+.about__card-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.about__card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    height: 100%;
+    z-index: -2;
+}

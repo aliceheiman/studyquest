@@ -16,8 +16,8 @@ export default function Page() {
             {
                 (user != null) ? (
                     <section className="mt-12 padding-x padding-y max-width" id="discover">
-                        <h2 className="text-[30px] font-bold">Decks</h2>
-                        <p>Select or create a deck to explore.</p>
+                        <h2 class="study__title">Decks</h2>
+                        <p class="study__description">Select or create a deck to start studying.</p>
 
                         <Decks />
 

@@ -37,19 +37,17 @@ export const redIcon = new L.Icon({
 
 export const footerLinks = [
     {
-        title: "About",
+        title: "Project",
         links: [
-            { title: "How it works", url: "/" },
-            { title: "Custom Questions", url: "/" },
-            { title: "Custom Decks", url: "/" },
-            { title: "Custom Routes", url: "/" },
+            { title: "How it works", url: "/#about" },
+            { title: "Quick Play", url: "/quickplay" },
+            { title: "Dashboard", url: "/dashboard" },
         ],
     },
     {
         title: "Info",
         links: [
-            { title: "Privacy Policy", url: "/" },
-            { title: "Terms of Use", url: "/" },
+            { title: "Contact", url: "/" },
         ],
     },
 ];

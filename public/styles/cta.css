@@ -1,0 +1,16 @@
+section.cta {
+    padding: 16px 40px 24px;
+}
+
+.cta img {
+    width: 100%;
+    object-fit: contain;
+    max-width: 550px;
+}
+
+.cta__buttons {
+    padding: 24px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}

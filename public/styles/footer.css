@@ -1,0 +1,37 @@
+footer {
+    background: var(--secondary-color);
+    padding: 32px 32px;
+}
+
+footer h4 {
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.footer__nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.footer__nav a {
+    color: #aaa;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.footer__socials {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 22px;
+}
+
+.footer__socials p {
+    font-weight: 400;
+    color: #aaa;
+    opacity: 0.8;
+    line-height: 1.5rem;
+    font-size: 14px;
+}

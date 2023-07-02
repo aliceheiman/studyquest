@@ -1,0 +1,34 @@
+/* START: map styles */
+
+.map_picker {
+    height: 50vh;
+    width: 100%;
+}
+
+.map_adventure {
+    height: 80vh;
+    width: 100%;
+}
+
+.marker_info__box {
+    z-index: 10000;
+}
+
+.map_undo__button {
+    z-index: 10000;
+    position: absolute;
+    bottom: 22px;
+    right: 4px;
+}
+
+.map_play__button {
+    z-index: 10000;
+    position: absolute;
+    top: 4px;
+    width: 400px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+/* END: map styles */

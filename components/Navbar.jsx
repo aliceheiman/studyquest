@@ -24,7 +24,7 @@ const Navbar = () => {
         }
 
         // Successful
-        return router.push("/profile");
+        return router.push("/dashboard");
     }
 
     const handleSignout = async (event) => {
@@ -39,38 +39,41 @@ const Navbar = () => {
     }
 
     return (
-        <header className="w-full z-10 border-b border-gray-100 bg-white">
-            <nav className="max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4">
-                <Link href="/" className="flex justify-center items-center">
-                    <Image
-                        src="./logo.svg"
-                        alt="StudyQuest Logo"
-                        width={118}
-                        height={18}
-                        className="object-contain"
-                    />
-                </Link>
+        <header>
 
-                {
-                    (user == null) ? (
-                        <CustomButton
-                            title="Sign in with Google"
-                            btnType="button"
-                            containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]"
-                            handleClick={handleSignin}
-                        />
+            <nav class="header__nav" data-aos="fade-down">
+                <div class="header__logo">
+                    <Link href="/">
+                        <h4 data-aos="fade-down">📚 StudyQuest</h4>
+                    </Link>
+                </div>
+
+                <ul class="header__menu" data-aos="fade-down">
+
+                    <li class="active">
+                        <a href="/">About</a>
+                    </li>
+                    <li>
+                        <a href="/quickplay">Quick Play</a>
+                    </li>
+                    <li>
+                        <a href="/dashboard">Dashboard</a>
+                    </li>
+
+                    {user === null ? (
+                        <button onClick={handleSignin} class="study__btn bg sm">Login</button>
                     ) : (
-                        <CustomButton
-                            title="Sign out"
-                            btnType="button"
-                            containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]"
-                            handleClick={handleSignout}
-                        />
-                    )
-                }
+                        <button onClick={handleSignout} class="study__btn bg sm">Logout</button>
+                    )}
+                </ul>
 
-
+                <ul class="header__menu-mobile" data-aos="fade-down">
+                    <li>
+                        <img src="icon-menu.png" alt="menu" />
+                    </li>
+                </ul>
             </nav>
+
         </header>
     )
 }
