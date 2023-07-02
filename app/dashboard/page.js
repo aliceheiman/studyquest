@@ -1,15 +1,9 @@
 "use client"
 
 import { useAuthContext } from "../../src/context/AuthContext";
-import { useRouter } from "next/navigation";
-import addData from "../../src/firebase/firestore/create"
-import { getItems } from "../../src/firebase/firestore/read"
-import { CustomFilter, Decks, SearchBar } from "@/components";
-import { fetchDecks } from "@/utils"
 
 export default function Page() {
     const { user } = useAuthContext()
-    const router = useRouter()
 
     return (
         <main>
@@ -23,7 +17,7 @@ export default function Page() {
 
                     </section>
                 ) : (
-                    <p></p>
+                    <></>
                 )
             }
         </main>
