@@ -87,6 +87,15 @@ a {
   text-align: center;
 }
 
+.section.left {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.study_height {
+  min-height: 60vh;
+}
+
 /* Buttons */
 .study__btn {
   padding: 15px;

@@ -50,7 +50,7 @@ const Navbar = () => {
 
                 <ul class="header__menu" data-aos="fade-down">
 
-                    <li class="active">
+                    <li>
                         <a href="/">About</a>
                     </li>
                     <li>

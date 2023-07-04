@@ -88,7 +88,7 @@ const MapPicker = ({ accessToken, markers, setMarkers, targetMarkers }) => {
 
             <CustomButton
                 title="Undo"
-                containerStyles="map_undo__button bg-primary-blue text-white"
+                containerStyles="map_undo__button study__btn bg"
                 handleClick={handleUndoClick}
             />
 

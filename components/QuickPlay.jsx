@@ -161,7 +161,7 @@ const QuickPlay = ({ accessToken }) => {
                 <textarea id="question-area" className="w-full bg-slate-100 h-48 p-2" placeholder="Q: What does DNA stand for? A: Deoxyribonucleic acid"></textarea>
                 <CustomButton
                     title="Save"
-                    containerStyles="bg-primary-blue text-white w-full"
+                    containerStyles="study__btn bg w-full"
                     handleClick={handleQuestions}
                 />
             </div>
